@@ -50,7 +50,7 @@ void tokenlist_add(tokenList *tokenList, token token);
 void tokenlist_destroy(tokenList *tokenList);
 token token_classify(lexer *lexer);
 token token_construct(token *token, char *lexeme, tokenType type, int line);
-char *tokentype_get(token *token);
+char *token_getstring(int type);
 
 void lexer_init(lexer *lexer, FILE *fptr);
 void lexer_advance(lexer *lexer);

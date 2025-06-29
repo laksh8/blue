@@ -5,6 +5,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+char *token_getstring(int type) {
+  char tokList[16][32] = {
+      "IDENTIFIER", "RETURN", "EOS",   "COMMA", "LBRACKET", "RBRACKET",
+      "INT",        "PLUS",   "MINUS", "IF",    "GOTO",     "UNIDENTIFIED",
+  };
+
+  return strdup(tokList[type]);
+}
+
 void tokenlist_init(tokenList *tokenList) {
   tokenList->capacity = 10;
   tokenList->count = 0;

@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     token curtoken = tokens.tokens[i];
     token token1 = tokens.tokens[0];
     printf("line - %d | type - %s | lexeme - %s\n", curtoken.line,
-           tokentype_get(&curtoken), curtoken.lexeme);
+           token_getstring(curtoken.type), curtoken.lexeme);
   }
 
   lexer_destroy(&lexer);
