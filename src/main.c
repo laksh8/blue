@@ -24,8 +24,10 @@ int main(int argc, char *argv[]) {
   lexer_classify(&lexer, &tokens);
 
   for (int i = 0; i < tokens.count; i++) {
-    token token = tokens.tokens[i];
-    printf("%s\n", token.lexeme);
+    token curtoken = tokens.tokens[i];
+    token token1 = tokens.tokens[0];
+    printf("line - %d | type - %s | lexeme - %s\n", curtoken.line,
+           tokentype_get(&curtoken), curtoken.lexeme);
   }
 
   lexer_destroy(&lexer);
