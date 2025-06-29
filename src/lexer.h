@@ -1,9 +1,7 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-#include <ctype.h>
 #include <stdio.h>
-#include <string.h>
 
 // lexer structure
 typedef struct {
